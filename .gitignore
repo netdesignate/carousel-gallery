@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+.cache/
+
+# Don't commit actual gallery images (you'll add them manually)
+images/gallery/*
+!images/gallery/.gitkeep
