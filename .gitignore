@@ -12,6 +12,8 @@ Thumbs.db
 *.tmp
 .cache/
 
-# Don't commit actual gallery images (you'll add them manually)
+# Don't commit actual gallery images, except samples
 images/gallery/*
 !images/gallery/.gitkeep
+!images/gallery/sample*.jpg
+!images/gallery/image-list.txt
