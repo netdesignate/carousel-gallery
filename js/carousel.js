@@ -57,11 +57,16 @@ class CarouselGallery {
     // ============================================
     // CREATE SLIDES
     // ============================================
-    createSlides() {
+   createSlides() {
         this.config.images.forEach((image, index) => {
             const slide = document.createElement('div');
             slide.className = 'carousel-slide';
             slide.dataset.index = index;
+            
+            // Add active class to first slide
+            if (index === 0) {
+                slide.classList.add('active');
+            }
             
             const img = document.createElement('img');
             img.src = this.config.imagePath + image.filename;
@@ -78,12 +83,21 @@ class CarouselGallery {
                 img.alt = 'Image failed to load';
             });
             
+            // Create caption
+            const caption = document.createElement('div');
+            caption.className = 'carousel-caption';
+            const captionText = document.createElement('p');
+            captionText.className = 'carousel-caption-text';
+            captionText.textContent = image.caption;
+            caption.appendChild(captionText);
+            
             slide.appendChild(img);
+            slide.appendChild(caption);
             this.track.appendChild(slide);
             this.slides.push(slide);
         });
     }
-    
+ 
     // ============================================
     // CREATE INDICATORS (DOTS)
     // ============================================
@@ -144,7 +158,7 @@ class CarouselGallery {
     // ============================================
     // NAVIGATION
     // ============================================
-    goToSlide(index) {
+   goToSlide(index) {
         // Normalize index (wrap around)
         if (index < 0) {
             index = this.config.images.length - 1;
@@ -158,6 +172,11 @@ class CarouselGallery {
         const offset = -100 * index;
         this.track.style.transform = `translateX(${offset}%)`;
         
+        // Update active slide
+        this.slides.forEach((slide, i) => {
+            slide.classList.toggle('active', i === index);
+        });
+        
         // Update active states
         this.updateActiveStates();
         this.updateCounter();
@@ -167,7 +186,7 @@ class CarouselGallery {
             this.resetAutoPlay();
         }
     }
-    
+ 
     nextSlide() {
         this.goToSlide(this.currentIndex + 1);
     }

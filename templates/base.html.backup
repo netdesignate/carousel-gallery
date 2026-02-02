@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery Carousel</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/lightbox.css">
 </head>
 <body>
     <div class="container">
@@ -53,32 +52,7 @@
         </footer>
     </div>
 
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <button class="lightbox-close" aria-label="Close lightbox">&times;</button>
-        
-        <div class="lightbox-content">
-            <button class="lightbox-nav lightbox-prev" aria-label="Previous image">
-                <span>‹</span>
-            </button>
-            
-            <div class="lightbox-image-container">
-                <img id="lightbox-image" src="" alt="">
-                <div class="lightbox-caption"></div>
-            </div>
-            
-            <button class="lightbox-nav lightbox-next" aria-label="Next image">
-                <span>›</span>
-            </button>
-        </div>
-        
-        <div class="lightbox-counter">
-            <span class="lightbox-current">1</span> / <span class="lightbox-total">0</span>
-        </div>
-    </div>
-
     <script src="../js/config.js"></script>
     <script src="../js/carousel.js"></script>
-    <script src="../js/lightbox.js"></script>
 </body>
 </html>

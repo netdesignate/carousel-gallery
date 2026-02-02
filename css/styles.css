@@ -138,7 +138,7 @@ header .subtitle {
    ============================================ */
 .carousel-indicators {
     position: absolute;
-    bottom: 20px;
+    bottom: 80px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -397,5 +397,67 @@ footer {
     .thumbnail,
     .carousel-indicator {
         transition: none;
+    }
+}
+
+/* ============================================
+   CAROUSEL CAPTIONS
+   ============================================ */
+.carousel-slide {
+    position: relative;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 100%);
+    color: white;
+    padding: 40px 20px 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.carousel-slide:hover .carousel-caption,
+.carousel-slide.active .carousel-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carousel-caption-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+/* Always show caption on active slide */
+.carousel-track .carousel-slide:first-child .carousel-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive caption sizes */
+@media (max-width: 768px) {
+    .carousel-caption {
+        padding: 30px 15px 15px;
+    }
+    
+    .carousel-caption-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-caption {
+        padding: 25px 10px 10px;
+    }
+    
+    .carousel-caption-text {
+        font-size: 0.9rem;
     }
 }
