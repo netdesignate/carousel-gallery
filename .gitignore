@@ -17,3 +17,6 @@ images/gallery/*
 !images/gallery/.gitkeep
 !images/gallery/sample*.jpg
 !images/gallery/image-list.txt
+
+# Include real gallery photos
+!images/gallery/P*.JPG
