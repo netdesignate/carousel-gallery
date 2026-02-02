@@ -1,4 +1,5 @@
 // Carousel Gallery JavaScript
+// t
 // We'll build the carousel functionality here
 
 document.addEventListener('DOMContentLoaded', function() {

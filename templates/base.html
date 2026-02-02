@@ -10,20 +10,49 @@
     <div class="container">
         <header>
             <h1>Photo Gallery</h1>
+            <p class="subtitle">Responsive Image Carousel</p>
         </header>
 
         <main>
-            <!-- Carousel will be inserted here -->
-            <div id="carousel-container">
-                <!-- Template for carousel -->
+            <div class="carousel">
+                <!-- Main carousel viewport -->
+                <div class="carousel-viewport">
+                    <div class="carousel-track">
+                        <!-- Images will be dynamically inserted here -->
+                    </div>
+                </div>
+
+                <!-- Navigation controls -->
+                <button class="carousel-control prev" aria-label="Previous image">
+                    <span>‹</span>
+                </button>
+                <button class="carousel-control next" aria-label="Next image">
+                    <span>›</span>
+                </button>
+
+                <!-- Slide indicators -->
+                <div class="carousel-indicators">
+                    <!-- Dots will be dynamically inserted here -->
+                </div>
+
+                <!-- Image counter -->
+                <div class="carousel-counter">
+                    <span class="current-slide">1</span> / <span class="total-slides">0</span>
+                </div>
+            </div>
+
+            <!-- Thumbnail strip -->
+            <div class="thumbnail-strip">
+                <!-- Thumbnails will be dynamically inserted here -->
             </div>
         </main>
 
         <footer>
-            <p>&copy; 2025 Gallery Project</p>
+            <p>&copy; 2025 Gallery Project | Built with Vanilla JavaScript</p>
         </footer>
     </div>
 
+    <script src="../js/config.js"></script>
     <script src="../js/carousel.js"></script>
 </body>
 </html>
