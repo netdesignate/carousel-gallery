@@ -1,44 +1,46 @@
 // Image Configuration
 // This file manages the gallery images
-
+// Image Configuration
 const galleryConfig = {
-    // Path to images folder
     imagePath: '../images/gallery/',
     
-    // Image array - add your images here
     images: [
         {
-            filename: 'sample1.jpg',
-            alt: 'Sample image 1',
-            caption: 'Beautiful landscape'
+            filename: 'P1055780.JPG',
+            alt: 'Photo 1',
+            caption: 'Add your caption here'
         },
         {
-            filename: 'sample2.jpg',
-            alt: 'Sample image 2',
-            caption: 'City skyline at sunset'
+            filename: 'P1055792.JPG',
+            alt: 'Photo 2',
+            caption: 'Add your caption here'
         },
         {
-            filename: 'sample3.jpg',
-            alt: 'Sample image 3',
-            caption: 'Mountain vista'
+            filename: 'P1055796.JPG',
+            alt: 'Photo 3',
+            caption: 'Add your caption here'
         },
         {
-            filename: 'sample4.jpg',
-            alt: 'Sample image 4',
-            caption: 'Ocean waves'
+            filename: 'P1055798.JPG',
+            alt: 'Photo 4',
+            caption: 'Add your caption here'
         },
         {
-            filename: 'sample5.jpg',
-            alt: 'Sample image 5',
-            caption: 'Forest path'
+            filename: 'P1055817.JPG',
+            alt: 'Photo 5',
+            caption: 'Add your caption here'
+        },
+        {
+            filename: 'P1055822.JPG',
+            alt: 'Photo 6',
+            caption: 'Add your caption here'
         }
     ],
     
-    // Carousel settings
     settings: {
         autoPlay: true,
-        autoPlayInterval: 3000, // milliseconds
-        transitionSpeed: 500,   // milliseconds
+        autoPlayInterval: 3000,
+        transitionSpeed: 500,
         enableKeyboard: true,
         enableTouch: true,
         showThumbnails: true,
@@ -47,7 +49,6 @@ const galleryConfig = {
     }
 };
 
-// Export for use in carousel.js
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = galleryConfig;
 }
